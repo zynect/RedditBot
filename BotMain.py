@@ -50,8 +50,8 @@ while True:
                 handle_ratelimit(submission.add_comment, "tested")
                 submission.add_comment("tested")
                 posts_replied_to.append(submission.id)"""
+            posts_replied_to.append(submission.id)
                 
         with open("posts_replied_to.txt", "w") as f:
             for post_id in posts_replied_to:
                 f.write(post_id + "\n")
-        time.sleep(60)
